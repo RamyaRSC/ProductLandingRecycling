@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Poppins:wght@300;400&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+body{
+    background-color: #effef5;
+    padding: 0px;
+    margin: 0px;
+    font-family: Poppins;
+}
+
+#navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0px 100px 0px 100px;
+    margin: 0px;
+    height: 60px;
+    z-index: 1;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }  
+
+#logo{
+    display: flex;
+    padding-left: 10px;
+    text-decoration: none;
+    color: rgb(227, 227, 227);
+    font-family: Merriweather;
+    font-size: 25px;
+}
+
+#left{
+    float: right;
+    padding: 10px;
+}
+
+#left a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-family: Poppins;
+    font-size: 15px;
+}
+
+#home{
+    height: 80vh;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-image: url("https://w.forfun.com/fetch/d5/d5015f825822f074879627bac3d1e644.jpeg");
+    /* background-image: url("https://akshayakalpa.org/wp-content/uploads/2022/04/Untitled-design-8.png"); */
+    /* background-color: #b7fbd5; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white
+}
+
+#slogan{
+    font-size: 65px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: Castoro Titling;
+}
+
+#subHome{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:30px;
+}
+
+#contactUsBtn{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-family: Castoro Titling;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#contactUsBtn:hover{
+    background-color: #ffffff;
+    border: 2px solid #056934;
+    transition: background-color 0.5s ease-in-out;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#contactUsBtn a{
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#contactUsBtn a:hover{
+    color: #0d8f49;
+    font-weight: 500;
+}
+
+#serviceContainer{
+    padding: 50px 0px 50px 0px;
+    background-image: url("https://t3.ftcdn.net/jpg/05/91/89/46/360_F_591894692_NM7OlvlwDgD7H4UpFieAsIQReA41xbpM.jpg");
+}
+
+#ourServices{
+    margin: 20px;
+    padding: 20px 0px 20px 0px;
+    background-color: rgba(207, 207, 207, 0.7);
+
+}
+
+#ourServices h3{
+    font-family: Castoro Titling;
+    text-align: center;
+}
+
+#services{
+    width: 80%;
+    padding: 5px 5px 10px 5px;
+    text-align: left;
+    margin: 0px auto 0px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#servicesCard{
+    background-color: rgba(28, 115, 2, 0.732);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    font-size: 15px;
+}
+
+#servicesCard a{
+    display: flex;
+    justify-content: flex-start;
+    height: 25px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 15px;
+}
+
+#servicesCard p{
+    color: rgb(255, 255, 255)
+}
+
+#serviceDes{
+    border-top: 2px solid black;
+}
+
+#blogContainer{
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+}
+
+#blog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card-container {
+    flex: 300px;
+    margin: 30px;
+}
+
+.card {
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+}
+
+.card a {
+    padding: 30px;
+    width: 100%;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.25s ease;
+}
+
+.card a:hover {
+    transform: translate(-30px, -30px);
+    border-color: #0d8f49;
+    border-radius: 10px;
+}
+
+.card a .card--display h3 {
+    color: #0d8f49;
+    margin: 250px 0 0 0;
+}
+
+.card a .card--hover {
+    display: none;
+}
+
+.card a:hover .card--display {
+    display: none;
+}
+
+.card a:hover .card--hover {
+    display: block;
+}
+
+.card a .card--hover p {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.card--border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px dashed black;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.card.card--dark a {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+#aboutUs{
+    display: flex;
+    flex-direction: column;
+}
+
+#main{
+    background-color: rgba(28, 115, 2, 0.732);
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-evenly;
+    padding: 0px 50px 0px 50px; 
+}
+
+#getInTouch, #quickLinks, #servicesFooter{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+#getInTouchText{
+    padding: 10px 10px 10px 0px;
+    border-bottom: 2px solid black;
+}
+
+#quickLinksText{
+    padding: 10px 10px 10px 0px;
+    border-bottom: 2px solid black;
+}
+
+#links{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 0px;
+    margin: 0px
+}
+
+#links a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px 5px 0px;
+}
+
+#servicesFooterText{
+    padding: 10px 10px 10px 0px;
+    border-bottom: 2px solid black;
+}
+
+#servicelinks {
+    display: flex;
+    flex-direction: column;
+}
+
+#servicelinks a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px 5px 0px;
+}
+
+#address, #mail, #number{
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
+#iconAdd, #iconMail, #iconNumber{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#iconAdd img, #iconMail img, #iconNumber img{
+    height: 20px;
+    width: 20px;
+} 
+
+#socialMedia{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid black;
+    margin-top: 10px ;
+}
+
+#socialMedia img{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+#footer{
+    background-color: #1a1a1a;
+    color: white;
+    height: 50px;
+    align-items: baseline;
+}
+
+#footer p{
+    color:#dfdfdfbe;
+    text-align: right;
+    padding-right: 100px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 1099px) {
+    #slogan{
+        width: 60%;
+    }
+
+    #main{
+        padding-top: 20px;
+    }
+
+    #getInTouch, #quickLinks, #servicesFooter{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+
+  }
+
+@media screen and (max-width: 928px) {
+    #slogan{
+        width: 80%;
+    }
+
+    #services{
+        width: 90%;
+    }
+
+    #main{
+        padding-top: 10px;
+    }
+
+    #getInTouch, #quickLinks, #servicesFooter{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+  }
