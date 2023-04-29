@@ -66,13 +66,36 @@ body{
     color: white
 }
 
-#slogan{
+#slogan {
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+
+    display: block;
     font-size: 65px;
     width: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     margin-bottom: 10px;
     font-family: Castoro Titling;
+}
+
+#slogan::before {
+    background: rgba(28, 115, 2, 0.732);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+#slogan:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+
+    cursor: pointer;
 }
 
 #subHome{
@@ -133,19 +156,22 @@ body{
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 #servicesCard{
+    --s: 360px;
+    width: var(--s);
     background-color: rgba(28, 115, 2, 0.732);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px;
+    padding: 10px;
     font-size: 15px;
     aspect-ratio: 1;
-    outline: calc(290px/2) solid rgba(0, 0, 0, 0.405);
-    outline-offset: calc(290px/-2);
+    outline: calc(var(--s)/2) solid rgba(0, 0, 0, 0.405);
+    outline-offset: calc(var(--s)/-2);
     cursor: pointer;
     transition: 0.3s;
 }
@@ -154,8 +180,6 @@ body{
     outline: 8px solid rgba(28, 115, 2, 0.732);
     outline-offset: 8px;
 }
-
-
 
 #servicesCard a{
     display: flex;
@@ -442,3 +466,36 @@ body{
         font-size: 15px;
     }
   }
+
+@media screen and (max-width: 1525px) {
+    #servicesCard{
+        --s:300px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    #servicesCard{
+        --s:250px;
+    }
+}
+
+
+@media screen and (max-width: 1111px) {
+    #servicesCard{
+        --s:200px;
+    }
+}
+
+
+@media screen and (max-width: 830px) {
+    #services{
+        grid-template-columns: repeat(2, 1fr);;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body{
+        display: none;
+    }
+}
