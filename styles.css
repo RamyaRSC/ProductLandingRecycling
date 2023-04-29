@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Poppins:wght@300;400&display=swap');
 
 html{
+    --g: #0d8f49;
     scroll-behavior: smooth;
     scroll-padding-top: 60px;
 }
@@ -90,14 +91,14 @@ body{
 }
 
 #contactUsBtn:hover{
-    color: #0d8f49;
+    color: var(--g);
     background-color: #ffffff;
-    border: 2px solid #056934;
+    border: 2px solid var(--g);
     transition: background-color 0.5s ease-in-out;
 }
 
 #contactUsBtn:hover a{
-    color:#056934;
+    color: var(--g);
 }
 
 #contactUsBtn a{
@@ -126,11 +127,11 @@ body{
 
 #services{
     width: 80%;
-    padding: 5px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
     text-align: left;
     margin: 0px auto 0px auto;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 50px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -142,7 +143,19 @@ body{
     justify-content: center;
     padding: 15px;
     font-size: 15px;
+    aspect-ratio: 1;
+    outline: calc(290px/2) solid rgba(0, 0, 0, 0.405);
+    outline-offset: calc(290px/-2);
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+#servicesCard:hover{
+    outline: 8px solid rgba(28, 115, 2, 0.732);
+    outline-offset: 8px;
+}
+
+
 
 #servicesCard a{
     display: flex;
@@ -215,7 +228,7 @@ body{
 }
 
 .title {
-    color: #0d8f49;
+    color: var(--g);
     margin-top: 75%;
     transition: all 1s ease-in-out;
 }
@@ -243,7 +256,7 @@ body{
     height: 100%;
     left: 0;
     top: 0;
-    border: 2px solid #0d8f49;
+    border: 2px solid var(--g);
     border-radius: 10px;
     z-index: -1;
 }
@@ -321,7 +334,7 @@ body{
 }
 
 #servicelinks a:hover, #links a:hover{
-    color:#057539;
+    color:var(--g);
 }
 
 #address, #mail, #number{
@@ -428,5 +441,4 @@ body{
     .card a .card--display h3 {
         font-size: 15px;
     }
-
   }
